@@ -4,29 +4,29 @@ AwareOS
 
 Состоит из двух частей:
 
-    heart.asm — загрузчик. 512 байт, которые BIOS читает с диска.
+heart.asm — загрузчик. 512 байт, которые BIOS читает с диска.
 
-    lungs.asm — ядро и консоль (shell). Вся логика и команды.
+lungs.asm — ядро и консоль (shell). Вся логика и команды.
 
 Как запустить
 
 Нужен Linux с установленными nasm и qemu
 
-    nasm -f bin heart.asm -o heart.bin
-    nasm -f bin lungs.asm -o lungs.bin
-    cat heart.bin lungs.bin > os.img
-    qemu-system-i386 -fda os.img
+nasm -f bin heart.asm -o heart.bin
+nasm -f bin lungs.asm -o lungs.bin
+cat heart.bin lungs.bin > os.img
+qemu-system-i386 -fda os.img
 
 Доступные команды
 
-    help — список команд
+help — список команд
 
-    time — часы реального времени (спросит часовой пояс)
+time — часы реального времени (спросит часовой пояс)
 
-    play — демка с перемещением @ по стрелкам
+play — демка с перемещением @ по стрелкам
 
-    clear — очистить экран
+clear — очистить экран
 
-    exit — выход
+exit — выход
 
 Также работает история команд по стрелкам вверх/вниз.
