@@ -12,10 +12,10 @@ lungs.asm — ядро и консоль (shell). Вся логика и ком�
 
 Нужен Linux с установленными nasm и qemu
 
-nasm -f bin heart.asm -o heart.bin
-nasm -f bin lungs.asm -o lungs.bin
-cat heart.bin lungs.bin > os.img
-qemu-system-i386 -fda os.img
+    nasm -f bin heart.asm -o heart.bin
+    nasm -f bin lungs.asm -o lungs.bin
+    cat heart.bin lungs.bin > os.img
+    qemu-system-i386 -fda os.img
 
 Доступные команды
 
